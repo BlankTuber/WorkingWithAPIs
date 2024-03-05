@@ -1,0 +1,21 @@
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pagebuttons{
+    width: 25%;
+    height: 30%;
+    font-size: 1.5rem;
+
+    background-color: #FFC0CB;
+    color: #333333;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.pagebuttons:hover{
+    opacity: 0.8;
+    transform: scale(1.07);
+}
