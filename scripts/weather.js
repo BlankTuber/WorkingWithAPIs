@@ -28,38 +28,66 @@ fetchLocationData().then(city => {
 });
 
 async function setUpReport(locationInput) {
-    let path = `${firstPartOfPath}${locationInput}${lastPartOfPath}`
-    let response = await fetch(path)
-    let jsonData = await response.json()
-    console.log(jsonData);
-
-    cityTitle.innerText = jsonData.resolvedAddress;
-    windyness.innerText = `${jsonData.currentConditions.windspeed} m/s`;
-    conditions.innerText = jsonData.currentConditions.conditions;
-    temperature.innerText = `${jsonData.currentConditions.temp}C°`;
-    amountofrain.innerText = `${jsonData.currentConditions.precip}mm rain`;
-
-    const sunriseTime = jsonData.currentConditions.sunrise;
-    const sunsetTime = jsonData.currentConditions.sunset;
-    const currentTime = jsonData.currentConditions.datetime;
+    let path = `${firstPartOfPath}${locationInput}${lastPartOfPath}`;
+    try {
+        let response = await fetch(path);
     
-    const currentDate = new Date();
-    const sunriseDate = new Date(currentDate);
-    const sunsetDate = new Date(currentDate);
-    const currentDateWithTime = new Date(currentDate);
-
+        if (!response.ok) {
+            throw new Error('Failed to load resource: ' + response.statusText);
+        }
     
-    const [sunriseHour, sunriseMinute] = sunriseTime.split(':');
-    const [sunsetHour, sunsetMinute] = sunsetTime.split(':');
-    const [currentHour, currentMinute] = currentTime.split(':');
+        let jsonData = await response.json();
+        cityTitle.innerText = jsonData.resolvedAddress;
+        windyness.innerText = `${jsonData.currentConditions.windspeed}m/s wind`;
+        conditions.innerText = jsonData.currentConditions.conditions;
+        temperature.innerText = `${jsonData.currentConditions.temp}°C`;
+        amountofrain.innerText = `${jsonData.currentConditions.precip}mm rain`;
 
-    sunriseDate.setHours(sunriseHour, sunriseMinute, 0);
-    sunsetDate.setHours(sunsetHour, sunsetMinute, 0);
-    currentDateWithTime.setHours(currentHour, currentMinute, 0);
+        const sunriseTime = jsonData.currentConditions.sunrise;
+        const sunsetTime = jsonData.currentConditions.sunset;
+        const currentTime = jsonData.currentConditions.datetime;
 
-    if (currentDateWithTime > sunriseDate && currentDateWithTime < sunsetDate) {
-        dayNightImg.src = "https://png.pngtree.com/png-vector/20230414/ourmid/pngtree-sun-orange-three-dimensional-illustration-png-image_6694186.png"
-    } else {
-        dayNightImg.src = "https://www.freeiconspng.com/thumbs/moon-png/moon-png--0.png";
+        const currentDate = new Date();
+        const sunriseDate = new Date(currentDate);
+        const sunsetDate = new Date(currentDate);
+        const currentDateWithTime = new Date(currentDate);
+
+        const [sunriseHour, sunriseMinute] = sunriseTime.split(':');
+        const [sunsetHour, sunsetMinute] = sunsetTime.split(':');
+        const [currentHour, currentMinute] = currentTime.split(':');
+
+        sunriseDate.setHours(sunriseHour, sunriseMinute, 0);
+        sunsetDate.setHours(sunsetHour, sunsetMinute, 0);
+        currentDateWithTime.setHours(currentHour, currentMinute, 0);
+
+        if (currentDateWithTime > sunriseDate && currentDateWithTime < sunsetDate) {
+            dayNightImg.src = "https://png.pngtree.com/png-vector/20230414/ourmid/pngtree-sun-orange-three-dimensional-illustration-png-image_6694186.png";
+        } else {
+            dayNightImg.src = "https://www.freeiconspng.com/thumbs/moon-png/moon-png--0.png";
+        }
+
+    } catch (error) {
+        console.log("Fetch error: ", error.message);
+        resultDiv.innerText = 'Failed to retrieve data. Please try again.';
+        cityTitle.innerText = '';
+        windyness.innerText = '';
+        conditions.innerText = '';
+        temperature.innerText = '';
+        amountofrain.innerText = '';
+        dayNightImg.src = 'https://cdn-icons-png.flaticon.com/512/7466/7466140.png';
     }
+}
+
+async function handleInput() {
+    const value = input.value.trim();
+
+    if (!value) {
+        console.log("Input is empty");
+        return;
+    }
+
+    input.value = "";
+
+    setUpReport(value);
+
 }

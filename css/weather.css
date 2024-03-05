@@ -1,0 +1,64 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+    align-items: center;
+    min-height: 10%;
+}
+
+#searchbar{
+    width: 50%;
+    font-size: 1rem;
+    height: 100%;
+}
+
+#searchsubmit{
+    font-size: 1rem;
+    width: 20%;
+    height: 100%;
+    background-color: #5100ff;
+    color: whitesmoke;
+}
+
+#resultDiv{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#txtdiv{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2, p {
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+#dayNightImgDiv{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#dayNightImg{
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+}

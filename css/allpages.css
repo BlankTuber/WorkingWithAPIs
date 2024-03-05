@@ -13,9 +13,13 @@ body {
 button{
     border-radius: 25px;
     box-shadow: 10px 10px 20px 1px;
+    transition-duration: 0.3s;
+    cursor: pointer;
 }
 button:hover{
     box-shadow: 25px 25px 20px 10px;
+    opacity: 0.8;
+    transform: scale(1.07);
 }
 
 header {

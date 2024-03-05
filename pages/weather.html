@@ -12,13 +12,18 @@
             <h1 id="title">Weather API</h1>
         </header>
         <main>
-            <input type="text" name="searchbar" id="searchbar" class="maininputs" placeholder="Search for a city..." alt="Searchbar to search for cities and get weather results." title="Searchbar">
-            <section id="resultDiv" class="hidden">
-                <h2 id="cityTitle">Asker</h2>
-                <p id="conditions">Partially Cloudy</p>
-                <p id="temperature">4C°</p>
-                <p id="amountofrain">0mm</p>
-                <p id="windyness">6 m/s (Dir: East)</p>
+            <section id="search">
+                <input type="text" name="searchbar" id="searchbar" placeholder="Search for a city..." alt="Searchbar to search for cities and get weather results." title="Searchbar">
+                <button type="submit" onclick="handleInput()" id="searchsubmit">Check</button>
+            </section>
+            <section id="resultDiv">
+                <div id="txtdiv">
+                    <h2 id="cityTitle"></h2>
+                    <p id="conditions"></p>
+                    <p id="temperature"></p>
+                    <p id="amountofrain"></p>
+                    <p id="windyness"></p>
+                </div>
                 <div id="dayNightImgDiv"><img src="" alt="Picture showing if it is day or night" id="dayNightImg" title="Day/Night image"></div>
             </section>
         </main>
