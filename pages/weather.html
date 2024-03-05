@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather | API User</title>
+        <link rel="stylesheet" href="../css/allpages.css">
+        <link rel="stylesheet" href="../css/weather.css">
+        <link rel="shortcut icon" href="https://i.bo3.no/image/343369/BlankLogoNuber2.png?c=0&h=241&w=250" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <h1 id="title">Weather API</h1>
+        </header>
+        <main>
+            <input type="text" name="searchbar" id="searchbar" class="maininputs" placeholder="Search for a city..." alt="Searchbar to search for cities and get weather results." title="Searchbar">
+            <section id="resultDiv" class="hidden">
+                <h2 id="cityTitle">Asker</h2>
+                <p id="conditions">Partially Cloudy</p>
+                <p id="temperature">4C°</p>
+                <p id="amountofrain">0mm</p>
+                <p id="windyness">6 m/s (Dir: East)</p>
+                <div id="dayNightImgDiv"><img src="" alt="Picture showing if it is day or night" id="dayNightImg" title="Day/Night image"></div>
+            </section>
+        </main>
+        <footer>
+            <a href="../" id="link">Back to start</a>
+
+            <script src="../scripts/weather.js"></script>
+        </footer>
+    </body>
+</html>
