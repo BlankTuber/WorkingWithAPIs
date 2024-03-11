@@ -68,13 +68,10 @@ async function setUpReport(locationInput) {
 
     } catch (error) {
         console.log("Fetch error: ", error.message);
-        resultDiv.innerText = 'Failed to retrieve data. Please try again.';
-        cityTitle.innerText = '';
-        windyness.innerText = '';
-        conditions.innerText = '';
-        temperature.innerText = '';
-        amountofrain.innerText = '';
-        dayNightImg.src = 'https://cdn-icons-png.flaticon.com/512/7466/7466140.png';
+        resultDiv.innerText = 'Failed to retrieve data. Reloading page...';
+        setTimeout(() => {
+            window.location.reload();
+        }, 1500);
     }
 }
 
@@ -91,3 +88,9 @@ async function handleInput() {
     setUpReport(value);
 
 }
+
+document.addEventListener("keydown", (key) => {
+    if (key.key == "Enter") {
+        handleInput();
+    }
+})

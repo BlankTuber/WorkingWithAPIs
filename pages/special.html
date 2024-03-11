@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Settings | The quiz | API User</title>
+        <link rel="stylesheet" href="../css/allpages.css">
+        <link rel="stylesheet" href="../css/special.css">
+        <link rel="shortcut icon" href="https://i.bo3.no/image/343369/BlankLogoNuber2.png?c=0&h=241&w=250" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <h1 id="title">The quiz settings</h1>
+        </header>
+        <main>
+            <form action="quizzer.html" method="get" id="form">
+                <label for="amount" id="amountTxt">10 questions</label>
+                <input type="range" name="amount" id="amount" min="5" max="50" value="10" oninput="changeValue(this)">
+                
+                <select name="category" id="category">
+                    <option value="0">Any category</option>
+                    <option value="9">General Knowledge</option>
+                    <option value="10">Books</option>
+                    <option value="11">Film</option>
+                    <option value="12">Music</option>
+                    <option value="13">Musicals & Theatres</option>
+                    <option value="14">TV</option>
+                    <option value="15">Video Games</option>
+                    <option value="16">Board Games</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="18">Computers</option>
+                    <option value="19">Mathematics</option>
+                    <option value="20">Mythology</option>
+                    <option value="21">Sports</option>
+                    <option value="22">Geography</option>
+                    <option value="23">History</option>
+                    <option value="24">Politics</option>
+                    <option value="25">Art</option>
+                    <option value="26">Celebrities</option>
+                    <option value="27">Animals</option>
+                    <option value="28">Vehicles</option>
+                    <option value="29">Comics</option>
+                    <option value="30">Gadgets</option>
+                    <option value="31">Anime & Manga</option>
+                    <option value="32">Cartoon & Animations</option>
+                </select>
+                <select name="difficulty" id="difficulty">
+                    <option value="any">Any difficulty</option>
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <div id="buttonDiv">
+                    <button type="submit" class="typeButton" name="type" value="multiple">Multiple choice</button>
+                    <button type="submit" class="typeButton" name="type" value="both">Both</button>
+                    <button type="submit" class="typeButton" name="type" value="boolean">True / False</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <a href="../" id="link">Back to start</a>
+
+            <script>
+                function changeValue(elem){
+                    let value = elem.value;
+                    document.getElementById("amountTxt").innerText = value + " questions";
+                }
+            </script>
+        </footer>
+    </body>
+</html>
