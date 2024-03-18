@@ -16,17 +16,21 @@
             <p id="quizErrorHandler"></p>
             <div id="multiple-quiz" class="quizDiv hidden">
                 <h2 id="multiq">Question</h2>
-                <button class="multipleBtn" id="multipleAnswr1" onclick="checkAnswr(this)">A</button>
-                <button class="multipleBtn" id="multipleAnswr2" onclick="checkAnswr(this)">B</button>
-                <button class="multipleBtn" id="multipleAnswr3" onclick="checkAnswr(this)">C</button>
-                <button class="multipleBtn" id="multipleAnswr4" onclick="checkAnswr(this)">D</button>
+                <div id="multiButtonDiv">
+                    <button class="multipleBtn" id="multipleAnswr1" onclick="checkAnswr(this)">A</button>
+                    <button class="multipleBtn" id="multipleAnswr2" onclick="checkAnswr(this)">B</button>
+                    <button class="multipleBtn" id="multipleAnswr3" onclick="checkAnswr(this)">C</button>
+                    <button class="multipleBtn" id="multipleAnswr4" onclick="checkAnswr(this)">D</button>
+                </div>
             </div>
 
             
             <div id="bool-quiz" class="quizDiv hidden">
                 <h2 id="boolq">Question</h2>
-                <button class="boolBtns" id="answrTrue" onclick="checkAnswr(this)">True</button>
-                <button class="boolBtns" id="answrFalse" onclick="checkAnswr(this)">False</button>
+                <div id="boolButtonDiv">
+                    <button class="boolBtns" id="answrTrue" onclick="checkAnswr(this)">True</button>
+                    <button class="boolBtns" id="answrFalse" onclick="checkAnswr(this)">False</button>
+                </div>
             </div>
 
             <a href="special.html">Take another quiz</a>

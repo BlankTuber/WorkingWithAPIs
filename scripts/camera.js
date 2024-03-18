@@ -1,6 +1,4 @@
-/* grabbed from tutorial */
-
-
+/* grabbed from tutorial, pretty much 1 to 1 with the original */
 const cameraVideoStream = document.getElementById('camera-stream')
 const shutterButton = document.getElementById('shutter')
 const photosButton = document.getElementById('photos-btn')
@@ -16,7 +14,6 @@ let height = 0
 let streaming = false
 
 const capturedImages = []
-const currentImage = 0
 
 // Connect media device
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia({ video: true })) {
@@ -59,11 +56,6 @@ function captureImage () {
   photosButton.style.backgroundImage = `url(${data})`
   capturedImages.push(data)
   capturedImages.reverse()
-
-  // Create new Image elements from array
-  capturedImages.forEach((image) => {
-
-  })
 }
 
 shutterButton.addEventListener('click', () => captureImage())

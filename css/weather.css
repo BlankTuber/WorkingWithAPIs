@@ -1,7 +1,7 @@
 main{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -30,7 +30,7 @@ main{
 
 #resultDiv{
     width: 100%;
-    height: 90%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,11 +46,11 @@ main{
 
 h2, p {
     width: 90%;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 #dayNightImgDiv{
-    width: 40%;
+    width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,5 +60,32 @@ h2, p {
 #dayNightImg{
     max-width: 100%;
     max-height: 100%;
+    text-align: center;
+}
+
+#nextDays{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: center;
+}
+
+.moreStatsDivs{
+    width: 15.5%;
+    height: 100%;
+    border: 1px solid black;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.moreDayStats, .moreTempStats, .moreConditionStats{
+    font-size: 0.7rem;
+    font-family: cursive;
     text-align: center;
 }
