@@ -48,10 +48,13 @@ async function getQuiz() {
                 break;
 
             case 3: //Code to say that the token used is not in the API database. This will remove the current sessionkey, and get a new one
-                alert("Token not found, will try to fix...");
+                alert("Token not found, please click 'okay' and way about 4 seconds"); //Usually happens at the start of a new session.
                 sessionStorage.removeItem("sessionKey");
                 sessionKey = "none";
-                await getSessionKey().then(() => {window.location.reload()});
+                await getSessionKey();
+                setTimeout( () => {
+                    window.location.reload();
+                }, 2500)
                 break;
 
             case 4: //Code that says that sessionkey is currently used up for the given arguments. Then resets the sessionkey
