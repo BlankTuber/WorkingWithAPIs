@@ -1,5 +1,9 @@
 # Working with APIs
-1. Make a weather report page using weather API
-2. Make a camera app
-3. Make a page using whatever API i feel like
-### Finished!
+
+- Small HTML + JS page using APIs for:
+
+1. Weather
+2. Quiz
+3. Camera
+
+- Not very good styling, i know, but it works :P
