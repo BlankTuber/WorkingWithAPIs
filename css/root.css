@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+:root {
+    --bg-color: #161629;
+    --surface-color: #22223a;
+    --surface-hover: #2d2d4d;
+
+    --primary-color: #66f2c5;
+    --secondary-color: #ff7bd5;
+    --accent-color: #8ea8ff;
+
+    --text-color: #f2f2f7;
+    --text-muted: #b8b8cc;
+
+    --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, #25254a, transparent 40%),
+        var(--bg-color);
+
+    color: var(--text-color);
+    font-family: "DynaPuff", system-ui;
+}
+
+h1, h2 {
+    font-weight: 600;
+}
+
+p {
+    color: var(--text-muted);
+}

@@ -1,0 +1,103 @@
+main {
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+/* Quiz container */
+.quizCard {
+    width: min(600px, 95%);
+
+    background: var(--surface-color);
+
+    padding: 2rem;
+
+    border-radius: 28px;
+
+    box-shadow: 0 10px 30px var(--shadow-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Header with progress */
+.quizHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+#scoreBar {
+    width: 70%;
+    height: 12px;
+
+    border-radius: 999px;
+    overflow: hidden;
+
+    accent-color: var(--primary-color);
+}
+
+#progressText {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Question */
+#quizQuestion {
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+/* Buttons container */
+#buttonsArea {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Answer buttons (created by JS) */
+.quizBtn {
+    width: 100%;
+
+    padding: 1rem;
+
+    border: none;
+    border-radius: 18px;
+
+    background: var(--bg-color);
+    color: var(--text-color);
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.quizBtn:hover {
+    transform: translateY(-2px);
+    background: var(--surface-hover);
+    color: var(--primary-color);
+}
+
+.quizBtn:active {
+    transform: translateY(0);
+}
+
+/* Correct / wrong states (for later JS) */
+.quizBtn.correct {
+    background: #2ecc71;
+    color: #0b1b12;
+}
+
+.quizBtn.wrong {
+    background: #e74c3c;
+    color: white;
+}

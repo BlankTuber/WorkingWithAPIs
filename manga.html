@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Working With APIs - Manga Explorer</title>
+
+		<link rel="stylesheet" href="css/root.css" />
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/manga.css" />
+	</head>
+
+	<body>
+		<nav>
+			<a href="index.html">🏠 Home</a>
+			<a href="manga.html">📚 Manga</a>
+			<a href="quiz.html">🧠 Quiz</a>
+			<a href="tts.html">🔊 Text To Speech</a>
+		</nav>
+
+		<main>
+			<section class="hero">
+				<h1>📚 Manga Explorer</h1>
+				<p>Search, filter, and discover manga from MyAnimeList</p>
+			</section>
+
+			<section class="toolbar">
+				<input type="text" id="searchInput" placeholder="Search manga..." />
+
+				<select id="genreSelector">
+					<option value="">All Genres</option>
+				</select>
+
+				<select id="sortSelector">
+					<option value="score">Highest Rated</option>
+
+					<option value="favorites">Most Favorited</option>
+
+					<option value="members">Most Popular</option>
+
+					<option value="chapters">Most Chapters</option>
+
+					<option value="published">Newest</option>
+				</select>
+
+				<button id="favoritesToggle">❤️ Favorites</button>
+			</section>
+
+			<section class="resultsHeader">
+				<h2 id="resultsTitle">🔥 Trending Manga</h2>
+
+				<p id="resultsCount">Loading...</p>
+			</section>
+
+			<section id="resultsGrid">
+				<!-- JS -->
+			</section>
+
+			<section id="loadingIndicator">Loading more...</section>
+		</main>
+
+		<!-- Modal -->
+
+		<div id="modalOverlay" class="hidden">
+			<div id="modal">
+				<button id="closeModal">✕</button>
+
+				<div id="modalContent"></div>
+			</div>
+		</div>
+
+		<script src="manga.js"></script>
+	</body>
+</html>

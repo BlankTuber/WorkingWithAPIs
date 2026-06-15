@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Working With APIs - Text to Speech</title>
+
+		<link rel="stylesheet" href="css/root.css" />
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/tts.css" />
+	</head>
+
+	<body>
+		<nav>
+			<a href="index.html">🏠 Home</a>
+			<a href="manga.html">📚 Manga</a>
+			<a href="quiz.html">🧠 Quiz</a>
+			<a href="tts.html">🔊 Text To Speech</a>
+		</nav>
+
+		<main>
+			<section class="ttsCard">
+				<h1>🔊 Text to Speech</h1>
+				<p>Use your browser’s built-in speech engine</p>
+
+				<textarea
+					id="textInput"
+					placeholder="Type something to speak..."
+				></textarea>
+
+				<div class="controls">
+					<label>
+						Voice
+						<select id="voiceSelect"></select>
+					</label>
+
+					<label>
+						Speed
+						<input
+							id="rate"
+							type="range"
+							min="0.5"
+							max="2"
+							step="0.1"
+							value="1"
+						/>
+					</label>
+
+					<label>
+						Pitch
+						<input
+							id="pitch"
+							type="range"
+							min="0"
+							max="2"
+							step="0.1"
+							value="1"
+						/>
+					</label>
+				</div>
+
+				<div class="buttons">
+					<button id="speakBtn">▶ Speak</button>
+					<button id="stopBtn">⏹ Stop</button>
+				</div>
+
+				<p id="charCount">0 characters</p>
+			</section>
+		</main>
+
+		<script src="tts.js"></script>
+	</body>
+</html>

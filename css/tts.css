@@ -1,0 +1,129 @@
+main {
+	width: min(900px, 95%);
+	margin: auto;
+	padding-bottom: 4rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ttsCard {
+	width: 100%;
+
+	background: var(--surface-color);
+
+	border-radius: 28px;
+
+	padding: 2rem;
+
+	box-shadow: 0 10px 30px var(--shadow-color);
+
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+.ttsCard h1 {
+	color: var(--primary-color);
+	text-align: center;
+}
+
+.ttsCard p {
+	text-align: center;
+}
+
+textarea {
+	width: 100%;
+	min-height: 160px;
+
+	resize: vertical;
+
+	padding: 1rem;
+
+	border-radius: 18px;
+
+	border: none;
+
+	background: var(--bg-color);
+	color: var(--text-color);
+
+	font-family: inherit;
+	font-size: 1rem;
+}
+
+.controls {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+}
+
+.controls label {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	color: var(--text-muted);
+	font-size: 0.9rem;
+}
+
+select,
+input[type="range"] {
+	width: 100%;
+}
+
+select {
+	padding: 0.7rem;
+
+	border-radius: 14px;
+
+	border: none;
+
+	background: var(--bg-color);
+	color: var(--text-color);
+}
+
+.buttons {
+	display: flex;
+	gap: 1rem;
+}
+
+button {
+	flex: 1;
+
+	padding: 1rem;
+
+	border: none;
+	border-radius: 18px;
+
+	font-family: inherit;
+
+	cursor: pointer;
+
+	transition: 0.2s;
+}
+
+#speakBtn {
+	background: var(--primary-color);
+	color: var(--bg-color);
+}
+
+#speakBtn:hover {
+	background: var(--secondary-color);
+	transform: translateY(-2px);
+}
+
+#stopBtn {
+	background: var(--surface-hover);
+	color: var(--text-color);
+}
+
+#stopBtn:hover {
+	transform: translateY(-2px);
+}
+
+#charCount {
+	text-align: right;
+	color: var(--text-muted);
+	font-size: 0.85rem;
+}

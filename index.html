@@ -1,23 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Home | API User</title>
-        <link rel="stylesheet" href="./css/allpages.css">
-        <link rel="stylesheet" href="./css/home.css">
-        <link rel="shortcut icon" href="https://i.bo3.no/image/343369/BlankLogoNuber2.png?c=0&h=241&w=250" type="image/x-icon">
-    </head>
-    <body>
-        <header>
-            <h1 id="title">API User</h1>
-        </header>
-        <main>
-            <button class="pagebuttons" onclick="window.location.href = './pages/weather.html'">Weather API</button>
-            <button class="pagebuttons" onclick="window.location.href = './pages/special.html'">Special API</button>
-            <button class="pagebuttons" onclick="window.location.href = './pages/camera.html'">Camera App</button>
-        </main>
-        <footer>
-            <a href="./" id="link">Back to start</a>
-        </footer>
-    </body>
+<!doctype html>
+<html lang="no">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Working With APIs - Home</title>
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/root.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Working With APIs 2.0</h1>
+			<p>A simple website exploring three different APIs</p>
+		</header>
+		<main>
+			<article class="apiLink" onclick="location.href = './manga.html'">
+				<h2>📚 Manga Explorer</h2>
+				<p>Search, filter, and discover manga through MangaDex</p>
+			</article>
+
+			<article class="apiLink" onclick="location.href = './quiz.html'">
+				<h2>🧠 Quiz</h2>
+				<p>Challenge yourself with random trivia questions</p>
+			</article>
+
+			<article class="apiLink" onclick="location.href = './tts.html'">
+				<h2>🔊 Text to Speech</h2>
+				<p>Turn any text into speech using your browser</p>
+			</article>
+		</main>
+		<footer>
+			<p>By BlankTuber, 2026</p>
+		</footer>
+	</body>
 </html>
